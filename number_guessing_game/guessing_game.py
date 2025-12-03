@@ -21,7 +21,7 @@ if (is_digit(high)):
 	high = int(high)
 else:
 	high = 50
-low = input("\tEnter the highest number you want to guess (default is 1): ")
+low = input("\tEnter the lower number you want to guess (default is 1): ")
 if (is_digit(low)):
 	low = int(low)
 	if (low >= high):
