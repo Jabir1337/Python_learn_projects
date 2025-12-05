@@ -37,7 +37,7 @@ while trys > 0:
 		print("Wrong")
 		print(f"You have {trys} left to guess")
 	else:
-		trys -= 1
+		trys += 1
 		print("character founded!")
 		print(f"You have {trys} left to guess")
 	if trys == 0:
