@@ -12,9 +12,14 @@ def last_number_of_array(array):
 def user_ui(array):
 	i = 0
 	print("How many number you want enter")
-	playe_number = int(input(">"))
+	while True:
+		player_number = input(">")
+		if player_number.isdigit() and 1 <= int(player_number) <= 3:
+			player_number = int(player_number)
+			break
+		print("Please enter 1, 2, or 3")
 	last_number = last_number_of_array(array)
-	while (i < playe_number):
+	while (i < player_number):
 		last_number += 1
 		if (check_21(last_number)):
 			return False
@@ -70,7 +75,7 @@ if (yes_no == 'No'):
 	exit(0)
 array = [0]
 print("Enter 'f' to take the first chance.")
-print("Enter 's' to take the first chance.")
+print("Enter 's' to take the second chance.")
 turn = input(">")
 if (turn == 'f'):
 	string = player_turn(array)
@@ -84,4 +89,5 @@ if (string == 'player'):
 	print("congrats you win!!")
 else:
 	print(f"\n=> final result: {array}")
-	print("Congrats you lose!!\n because you add the 21 number")
+	print("Congrats you lose against my program!!\n\
+	because you add the 21 number")
